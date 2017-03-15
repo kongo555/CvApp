@@ -1,0 +1,28 @@
+<% if @skills.any? || @languages.any? %>
+\cvsection{Skills}
+
+\begin{cvskills}
+<% if @skills.any?%>
+  \cvskill
+  {Programming} % Category
+  {<% @skills.each_with_index do |skill, index| %>
+      <%= skill.name -%>
+      <% if index < (@skills.length - 1) %>
+      <%= "," -%>
+      <% end %>
+  <% end %>} % Skills
+<% end %>
+
+<% if @languages.any? %>
+  \cvskill
+  {Languages} % Category
+  {<% @languages.each_with_index do |language, index| %>
+      <%= language.name -%>
+      <% if index < (@languages.length - 1) %>
+      <%= "," -%>
+      <% end %>
+  <% end %>}
+<% end %>
+
+\end{cvskills}
+<% end %>

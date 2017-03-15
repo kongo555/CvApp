@@ -11,10 +11,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'react_webpack_rails'
 gem 'rwr-react_router'
+gem 'rwr-redux'
 gem 'bootstrap-sass', '3.3.6'
 gem 'bcrypt',         '3.1.11'
 gem 'bootstrap_sb_admin_base_v2'
 gem 'rails-latex'
+gem 'fetch-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

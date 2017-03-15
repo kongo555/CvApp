@@ -5,6 +5,8 @@ const fs = require('fs');
 const path = require('path');
 const http = require('http');
 const dispatcher = require('httpdispatcher');
+// const httpdispatcher = require('httpdispatcher');
+// const dispatcher = new httpdispatcher();
 const { integrationsManager } = require('react-webpack-rails');
 
 const PORT = 8081;

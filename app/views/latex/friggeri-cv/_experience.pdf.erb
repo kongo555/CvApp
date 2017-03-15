@@ -1,0 +1,18 @@
+<% if @experiences.any? %>
+\section{expereience}
+
+\begin{entrylist}
+  <% @experiences.each do |experience| %>
+  \entry
+    {<%= experience.date_from.strftime('%Y') %>
+      <% if experience.date_to.present? %>
+        to <%= experience.date_to.strftime('%Y') %>
+      <% end %>}
+    {<%= experience.organization %>, <%= experience.job_title %>}
+    {<%= experience.location %>}
+    {<% if experience.description.present? %>
+      <%= experience.description.gsub(/\n/, '\\\\\\') %>
+      <% end %>}
+  <% end %>
+\end{entrylist}
+<% end %>

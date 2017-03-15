@@ -1,0 +1,21 @@
+\section{about}
+  <%= @personal_information.street %>
+  <%= @personal_information.zipCode %> <%= @personal_information.town %>
+  <% if @personal_information.birthday %>
+  Data ur. <%= @personal_information.birthday %>
+  <% end %>
+  ~
+  <% if @personal_information.phone.present? %>
+  \faMobile\acvHeaderIconSep\<%= @personal_information.phone %>
+  <% end %>
+  %\href{mailto:<%= @personal_information.email %>}{\faEnvelope\acvHeaderIconSep\ <%= @personal_information.email %>}
+  \href{mailto:<%= @personal_information.email %>}{<%= @personal_information.email %>}
+  <% if @personal_information.homepage.present? %>
+  \href{http://<%= @personal_information.homepage %>}{\faHome\acvHeaderIconSep <%= @personal_information.homepage %>}
+  <% end %>
+  <% if @personal_information.github.present? %>
+  \href{https://github.com/<%= @personal_information.github %>}{\faGithubSquare\acvHeaderIconSep <%= @personal_information.github %>}
+  <% end %>
+  <% if @personal_information.linkedin.present? %>
+  \href{https://www.linkedin.com/in/<%= @personal_information.linkedin %>}{\faLinkedinSquare\acvHeaderIconSep <%= @personal_information.linkedin %>}
+  <% end %>

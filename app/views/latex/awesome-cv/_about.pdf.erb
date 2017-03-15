@@ -1,0 +1,31 @@
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+\name{<%= @personal_information.name %>}{<%= @personal_information.surname %>}
+\address{<%= @personal_information.street %>, <%= @personal_information.zipCode %> <%= @personal_information.town %>}
+<% if @personal_information.phone.present? %>
+\mobile{<%= @personal_information.phone %>}
+<% end %>
+
+\email{<%= @personal_information.email %>}
+<% if @personal_information.homepage.present? %>
+\homepage{<%= @personal_information.homepage %>}
+<% end %>
+<% if @personal_information.github.present? %>
+\github{<%= @personal_information.github %>}
+<% end %>
+<% if @personal_information.linkedin.present? %>
+\linkedin{<%= @personal_information.linkedin %>}
+<% end %>
+%\skype{skypeid}
+%\stackoverflow{SOid}{SOname}
+%\twitter{@twit}
+
+<% if @personal_information.profession.present? %>
+  \position{<%= @personal_information.profession %>} % Your expertise/fields
+<% end %>
+<% if @personal_information.statement.present? %>
+  \quote{<%= @personal_information.statement %>} % A quote or statement
+<% end %>

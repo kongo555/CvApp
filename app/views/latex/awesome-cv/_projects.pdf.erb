@@ -1,0 +1,25 @@
+<% if @projects.any? %>
+\cvsection{Projects}
+
+\begin{cventries}
+<% @projects.each do |project| %>
+  \cventry
+  {<% if project.page.present? %>
+    \href{<%= project.page -%>}{<%= project.page -%>}
+    <% end %>} % Job title
+  {<%= project.name %>} % Organization
+  {} % Location
+  {<% if project.date_from.present? %>
+    <%= project.date_from.strftime('%Y') %>
+    <% if project.date_to.present? %>
+      to <%= project.date_to.strftime('%Y') %>
+    <% end %>
+  <% end %>} % Date(s)
+  {<% if project.description.present? %> % Description(s) of tasks/responsibilities
+    \begin{cvitems}
+      \item {<%= project.description.gsub(/\n/, '\\\\\\') %>}
+    \end{cvitems}
+  <% end %>}
+<% end %>
+\end{cventries}
+<% end %>

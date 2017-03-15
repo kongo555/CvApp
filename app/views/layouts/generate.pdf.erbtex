@@ -1,0 +1,4 @@
+<% @latex_config = { :command => 'xelatex', :parse_runs => 2, :supporting => ['app/assets/latex/' + @texClass + '.cls', 'app/assets/latex/fontawesome.sty', 'app/assets/latex/fonts']} %>
+\documentclass[]{<%= @texClass %>}
+
+<%= yield %>

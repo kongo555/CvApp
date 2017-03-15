@@ -1,0 +1,20 @@
+<% if @projects.any? %>
+\section{projects}
+
+\begin{entrylist}
+  <% @projects.each do |project| %>
+  \entry
+    {<% if project.date_from.present? %>
+      <%= project.date_from.strftime('%Y') %>
+      <% if project.date_to.present? %>
+        to <%= project.date_to.strftime('%Y') %>
+      <% end %>
+    <% end %>}
+    {<%= project.name %>}
+    {}
+    {<% if project.description.present? %>
+      <%= project.description.gsub(/\n/, '\\\\\\')%>
+    <% end %>}
+  <% end %>
+\end{entrylist}
+<% end %>

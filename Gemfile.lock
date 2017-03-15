@@ -61,6 +61,8 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
+    fetch-rails (2.0.1)
+      rails (>= 4.1.0)
     ffi (1.9.17)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
@@ -128,6 +130,8 @@ GEM
       rails (>= 3.2)
     rwr-react_router (0.3.0)
       react_webpack_rails (>= 0.1.0)
+    rwr-redux (0.5.0)
+      react_webpack_rails (>= 0.5.0)
     rwr-view_helpers (0.1.1)
       rails
       react_webpack_rails (>= 0.6.0)
@@ -180,6 +184,7 @@ DEPENDENCIES
   bootstrap_sb_admin_base_v2
   byebug
   coffee-rails (~> 4.2)
+  fetch-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -188,6 +193,7 @@ DEPENDENCIES
   rails-latex
   react_webpack_rails
   rwr-react_router
+  rwr-redux
   rwr-view_helpers (~> 0.1.1)
   sass-rails (~> 5.0)
   spring
@@ -199,4 +205,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.13.7
+   1.14.2

@@ -1,0 +1,21 @@
+<% if @experiences.any? %>
+\cvsection{Experience}
+
+\begin{cventries}
+<% @experiences.each do |experience| %>
+  \cventry
+  {<%= experience.job_title %>} % Job title
+  {<%= experience.organization %>} % Organization
+  {<%= experience.location %>} % Location
+  {<%= experience.date_from %>
+    <% if experience.date_to.present? %>
+      - <%= experience.date_to %>
+    <% end %>} % Date(s)
+  {<% if experience.description.present? %> % Description(s) of tasks/responsibilities
+    \begin{cvitems}
+      \item {<%= experience.description.gsub(/\n/, '\\\\\\') %>}
+    \end{cvitems}
+  <% end %>}
+<% end %>
+\end{cventries}
+<% end %>

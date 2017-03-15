@@ -1,0 +1,22 @@
+\begin{document}
+\header{<%= @personal_information.name %>}{<%= @personal_information.surname %>}
+       {<% if @personal_information.profession.present? %>
+         <%= @personal_information.profession %>
+       <% end %>}
+
+\begin{aside}
+  <%= render '/latex/' + @texClass + '/about' -%>
+  <%= render '/latex/' + @texClass + '/languages' -%>
+  <%= render '/latex/' + @texClass + '/skills' -%>
+\end{aside}
+
+\section{interests}
+
+complex networks, social networks, community detection, community structure,
+overlapping communities, information diffusion, viral marketing, social
+inference, recommendation, data mining
+
+<%= render '/latex/' + @texClass + '/education' -%>
+<%= render '/latex/' + @texClass + '/experience' -%>
+<%= render '/latex/' + @texClass + '/projects' -%>
+\end{document}

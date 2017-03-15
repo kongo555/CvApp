@@ -1,0 +1,11 @@
+<% if logged_in? %>
+<%= redux_store 'AppStore' %>
+<%= redux_router 'AppRoutes' %>
+<% else %>
+<div class="container">
+    <div class="row">
+        <%= render 'home/log_in' %>
+        <%= render 'home/sing_in' %>
+    </div>
+</div>
+<% end %>

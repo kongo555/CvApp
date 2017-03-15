@@ -1,0 +1,20 @@
+<% if @educations.any? %>
+\cvsection{Education}
+
+\begin{cventries}
+  <% @educations.each do |education| %>
+    \cventry
+    {<%= education.degree %>} % Degree
+    {<%= education.institution %>} % Institution
+    {<%= education.location %>} % Location
+    {<%= education.date_from.strftime('%Y') %> - <%= education.date_to.strftime('%Y') %>} % Date(s)
+    { <% if education.description.present? %>% Description(s) bullet points
+      \begin{cvitems}
+      \item {<%= education.description.gsub(/\n/, '\\\\\\') %>}
+      \end{cvitems}
+    <% end %>}
+  <% end %>
+
+
+\end{cventries}
+<% end %>

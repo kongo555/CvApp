@@ -20,7 +20,11 @@ module.exports = {
         key: 'style',
         test: /\.s?css$/,
         loader: ExtractTextPlugin.extract('css!sass')
-      }
+      },
+      {
+        test: /\.png$/,
+        loader: "url-loader?name=images/[name].[ext]"
+      },
     ]
   },
   resolve: {

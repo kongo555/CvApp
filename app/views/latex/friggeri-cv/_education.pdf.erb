@@ -1,0 +1,15 @@
+<% if @educations.any? %>
+\section{education}
+
+\begin{entrylist}
+  <% @educations.each do |education| %>
+  \entry
+    {<%= education.date_from.strftime('%Y') %> to <%= education.date_to.strftime('%Y') %>}
+    {<%= education.institution %>, <%= education.degree %>}
+    {<%= education.location %>}
+    {<% if education.description.present? %>
+      <%= education.description.gsub(/\n/, '\\\\\\') %>
+      <% end %>}
+  <% end %>
+\end{entrylist}
+<% end %>

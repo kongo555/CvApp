@@ -1,0 +1,6 @@
+<% if @skills.any? %>
+\section{skills}
+  <% @skills.each do |skill| %>
+  <%= skill.name %>
+  <% end %>
+<% end %>

@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require react_integration
 //= require react_bundle
+//= require bootstrap_sb_admin_base_v2
 //= require_tree .
+//= require fetch
