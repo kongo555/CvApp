@@ -13,7 +13,7 @@ class CvsController < ApplicationController
 
   def create
     cv = current_user.cvs.build(cv_params)
-    cv.template = 1
+    cv.template_id = 1
       if cv.save
         personal_information = cv.build_personal_information
         personal_information.save
