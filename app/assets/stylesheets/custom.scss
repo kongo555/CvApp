@@ -2,6 +2,55 @@ html,body{  min-height: 100%; }
 #wrapper{min-height: 100%;}
 #page-wrapper{min-height: 100%;}
 
+$main-color: #d9534f;
+
+.home{
+  .navbar {
+      margin-bottom: 0;
+      background-color: $main-color;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+  }
+
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: $main-color !important;
+      background-color: #fff !important;
+  }
+
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+}
+
+.bg-jumbotron {
+    background-color: $main-color; /* Orange */
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+.logo-small {
+    color: $main-color;
+    font-size: 50px;
+}
 
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */

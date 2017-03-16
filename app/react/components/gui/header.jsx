@@ -39,7 +39,7 @@ class Header extends React.Component {
                               <span className="icon-bar"></span>
                               <span className="icon-bar"></span>
                           </button>
-                          <div className="navbar-brand"><Link to="/">CvApp</Link></div>
+                          <div className="navbar-brand"><Link to="/">Cv-App</Link></div>
                       </div>
 
                       <ul className="nav navbar-top-links navbar-right">
