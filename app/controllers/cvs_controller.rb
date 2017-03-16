@@ -1,6 +1,6 @@
 class CvsController < ApplicationController
   before_action :logged_in_user, only: [:index, :show, :create, :update, :destroy]
-  before_action :correct_user,   only: [:show, :create, :update, :destroy]
+  before_action :correct_user,   only: [:show, :update, :destroy]
 
   def index
       # puts(current_user.cvs)
