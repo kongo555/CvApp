@@ -3,7 +3,7 @@ import React from 'react'
 class ElementPanel extends React.Component {
     render() {
         return (
-            <div className="panel panel-default">
+            <div className="panel panel-red">
                 <div className="panel-heading">
                     {this.props.title}
                 </div>

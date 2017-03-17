@@ -19,8 +19,8 @@ class Language extends React.Component {
     render() {
         return (
             <ElementPanel title = {
-                <div>Element #{this.props.index + 1}
-                  <a className="btn btn-danger btn-xs" onClick={() => this.removeElement({})}>
+                <div><span>Element #{this.props.index + 1}</span>
+                  <a className="btn btn-default btn-xs" onClick={() => this.removeElement({})}>
                                 <i className="fa fa-minus"></i>
                   </a>
                 </div>

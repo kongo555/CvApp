@@ -4,7 +4,25 @@
 %----------------------------------------------------------------------------------------
 
 \name{<%= @personal_information.name %>}{<%= @personal_information.surname %>}
-\address{<%= @personal_information.street %>, <%= @personal_information.zipCode %> <%= @personal_information.town %>}
+<% if @personal_information.street.present? || @personal_information.zipCode.present? || @personal_information.town.present?%>
+\address{
+  <% if @personal_information.street.present? %>
+    <%= @personal_information.street %>
+  <% end %>%
+  <% if @personal_information.zipCode.present? %>
+    <% if @personal_information.street.present? %>
+    ,
+    <% end %>%
+    <%= @personal_information.zipCode %>
+  <% end %>%
+  <% if @personal_information.town.present? %>
+    <% if @personal_information.street.present? ||  @personal_information.street.present? %>
+    ,
+    <% end %>%
+    <%= @personal_information.town %>
+  <% end %>%
+  }
+<% end %>
 <% if @personal_information.phone.present? %>
 \mobile{<%= @personal_information.phone %>}
 <% end %>

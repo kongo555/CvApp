@@ -1,6 +1,14 @@
 \section{about}
+  <% if @personal_information.street.present? %>
   <%= @personal_information.street %>
-  <%= @personal_information.zipCode %> <%= @personal_information.town %>
+  <% end %>
+  <% if @personal_information.zipCode.present? && @personal_information.town.present?%>
+   <%= @personal_information.zipCode %>, <%= @personal_information.town %>
+  <% elsif @personal_information.zipCode.present? %>
+    <%= @personal_information.zipCode %>
+  <% elsif @personal_information.town.present? %>
+    <%= @personal_information.town %>
+  <% end %>
   <% if @personal_information.birthday %>
   Data ur. <%= @personal_information.birthday %>
   <% end %>

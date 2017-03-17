@@ -20,8 +20,8 @@ class EducationElement extends React.Component {
     render() {
         return (
             <ElementPanel title = {
-                <div>Element #{this.props.index + 1}
-                  <a className="btn btn-danger btn-xs" onClick={() => this.removeElement({})}>
+                <div><span>Element #{this.props.index + 1}</span>
+                  <a className="btn btn-default btn-xs" onClick={() => this.removeElement({})}>
                                 <i className="fa fa-minus"></i>
                   </a>
                 </div>
@@ -30,13 +30,13 @@ class EducationElement extends React.Component {
               <Field name={`${this.props.element}.institution`} component={CustomTextField} label="Institution" validate={[ required ]} />
             </div>
             <div className="col-lg-10">
-              <Field name={`${this.props.element}.location`} component={CustomTextField} label="Location" validate={[ required ]} />
+              <Field name={`${this.props.element}.location`} component={CustomTextField} label="Location" />
             </div>
             <div className="col-lg-2">
-              <Field name={`${this.props.element}.date_from`} component={CustomDatePicker} label="From" validate={[ required ]}/>
+              <Field name={`${this.props.element}.date_from`} component={CustomDatePicker} label="From" />
             </div>
             <div className="col-lg-10">
-              <Field name={`${this.props.element}.degree`} component={CustomTextField} label="Degree" validate={[ required ]} />
+              <Field name={`${this.props.element}.degree`} component={CustomTextField} label="Degree" />
             </div>
             <div className="col-lg-2">
               <Field name={`${this.props.element}.date_to`} component={CustomDatePicker} label="To"/>

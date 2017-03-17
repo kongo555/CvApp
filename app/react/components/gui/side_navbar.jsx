@@ -10,25 +10,25 @@ class SideNavbar extends React.Component {
         if (id >= 0) {
             view = (
               <li>
-                <Link to={`/cv/${id}/personal_informations`}>
+                <Link to={`/cv/${id}/personal_informations`} activeClassName="active">
                     <i className="fa fa-user fa-fw"></i> Personal informations
                 </Link>
-                <Link to={`/cv/${id}/languages`}>
+                <Link to={`/cv/${id}/languages`} activeClassName="active">
                     <i className="fa fa-globe fa-fw"></i> Languages
                 </Link>
-                <Link to={`/cv/${id}/skills`}>
+                <Link to={`/cv/${id}/skills`} activeClassName="active">
                     <i className="fa fa-list fa-fw"></i> Skills
                 </Link>
-                <Link to={`/cv/${id}/educations`}>
+                <Link to={`/cv/${id}/educations`} activeClassName="active">
                     <i className="fa fa-book fa-fw"></i> Educations
                 </Link>
-                <Link to={`/cv/${id}/experiences`}>
+                <Link to={`/cv/${id}/experiences`} activeClassName="active">
                     <i className="fa fa-briefcase fa-fw"></i> Experiences
                 </Link>
-                <Link to={`/cv/${id}/projects`}>
+                <Link to={`/cv/${id}/projects`} activeClassName="active">
                     <i className="fa fa-flask fa-fw"></i> Projects
                 </Link>
-                <Link to={`/cv/${id}/templates`}>
+                <Link to={`/cv/${id}/templates`} activeClassName="active">
                     <i className="fa fa-file-o fa-fw"></i> Templates
                 </Link>
                 <Link to={`/cv/${id}/generate`} target="_blank">

@@ -2,7 +2,68 @@ html,body{  min-height: 100%; }
 #wrapper{min-height: 100%;}
 #page-wrapper{min-height: 100%;}
 
-$main-color: #d9534f;
+$main-color: #f4511e;
+
+body {
+    background-color: $main-color !important;
+}
+
+#page-wrapper{
+   /*background-color: #f6f6f6 !important; */
+}
+
+hr {
+    color: $main-color !important;
+}
+
+.panel-red panel-heading{
+    border-color: $main-color !important;
+    color: #fff;
+    background-color: $main-color !important;
+}
+
+.panel-heading span{
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    font-family: Montserrat, sans-serif;
+}
+
+.appNavbar{
+  .navbar {
+     font-size: 12px !important;
+     line-height: 1.42857143 !important;
+     letter-spacing: 4px;
+     font-family: Montserrat, sans-serif;
+ }
+
+  .navbar, .sidebar-nav, .page-header, .dropdown-menu {
+      background-color: $main-color;
+  }
+
+  .navbar li a, .navbar-brand a{
+      color: #fff;
+  }
+  .navbar-brand a{
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+  }
+
+  .nav li a:hover, .nav li.active a, .nav li.focus a, .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+      color: $main-color !important;
+      background-color: #fff !important;
+  }
+
+  .dropdown-menu li:hover {
+      color: $main-color !important;
+      background-color: #fff !important;
+  }
+}
+
+.active {
+    background-color: #fff !important;
+    color: $main-color !important;
+}
 
 .home{
   .navbar {
@@ -37,6 +98,10 @@ $main-color: #d9534f;
 
 .container-fluid {
     padding: 60px 50px;
+}
+
+.bg-main-color {
+    background-color: $main-color;
 }
 
 .bg-white {

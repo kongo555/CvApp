@@ -20,8 +20,8 @@ class ExperienceElement extends React.Component {
     render() {
         return (
             <ElementPanel title = {
-                <div>Element #{this.props.index + 1}
-                  <a className="btn btn-danger btn-xs" onClick={() => this.removeElement({})}>
+                <div><span>Element #{this.props.index + 1}</span>
+                  <a className="btn btn-default btn-xs" onClick={() => this.removeElement({})}>
                                 <i className="fa fa-minus"></i>
                   </a>
                 </div>
@@ -30,13 +30,13 @@ class ExperienceElement extends React.Component {
                   <Field name={`${this.props.element}.organization`} component={CustomTextField} label="Organization" validate={[ required ]} />
                 </div>
                 <div className="col-lg-10">
-                  <Field name={`${this.props.element}.location`} component={CustomTextField} label="Location" validate={[ required ]} />
+                  <Field name={`${this.props.element}.location`} component={CustomTextField} label="Location" />
                 </div>
                 <div className="col-lg-2">
-                  <Field name={`${this.props.element}.date_from`} component={CustomDatePicker} label="From" validate={[ required ]}/>
+                  <Field name={`${this.props.element}.date_from`} component={CustomDatePicker} label="From"/>
                 </div>
                 <div className="col-lg-10">
-                  <Field name={`${this.props.element}.job_title`} component={CustomTextField} label="Job Title" validate={[ required ]} />
+                  <Field name={`${this.props.element}.job_title`} component={CustomTextField} label="Job Title" />
                 </div>
                 <div className="col-lg-2">
                   <Field name={`${this.props.element}.date_to`} component={CustomDatePicker} label="To"/>

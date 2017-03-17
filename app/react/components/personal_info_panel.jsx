@@ -101,7 +101,7 @@ function mapDispatchToProps(dispatch) {
 
 const validate = values => {
   const errors = {}
-  const requiredFields = [ 'name', 'surname', 'email', 'street', 'zipCode', 'town' ]
+  const requiredFields = [ 'name', 'surname' ]
   requiredFields.forEach(field => {
     if (!values[ field ]) {
       errors[ field ] = 'Required'
