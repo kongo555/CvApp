@@ -2,7 +2,7 @@ html,body{  min-height: 100%; }
 #wrapper{min-height: 100%;}
 #page-wrapper{min-height: 100%;}
 
-$main-color: #f4511e;
+$main-color: #d9534f;
 
 body {
     background-color: $main-color !important;
@@ -10,16 +10,6 @@ body {
 
 #page-wrapper{
    /*background-color: #f6f6f6 !important; */
-}
-
-hr {
-    color: $main-color !important;
-}
-
-.panel-red panel-heading{
-    border-color: $main-color !important;
-    color: #fff;
-    background-color: $main-color !important;
 }
 
 .panel-heading span{
