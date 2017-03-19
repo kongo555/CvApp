@@ -13,16 +13,16 @@ body {
 }
 
 .panel-heading span{
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
+    font-size: 12px;
+    line-height: 1.42857143;
     letter-spacing: 4px;
     font-family: Montserrat, sans-serif;
 }
 
 .appNavbar{
   .navbar {
-     font-size: 12px !important;
-     line-height: 1.42857143 !important;
+     font-size: 12px;
+     line-height: 1.42857143;
      letter-spacing: 4px;
      font-family: Montserrat, sans-serif;
  }
@@ -35,19 +35,28 @@ body {
       color: #fff;
   }
   .navbar-brand a{
-      line-height: 1.42857143 !important;
+      line-height: 1.42857143;
       letter-spacing: 4px;
   }
 
   .nav li a:hover, .nav li.active a, .nav li.focus a, .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
-      color: $main-color !important;
-      background-color: #fff !important;
+      color: $main-color;
+      background-color: #fff;
   }
 
   .dropdown-menu li:hover {
-      color: $main-color !important;
-      background-color: #fff !important;
+      color: $main-color;
+      background-color: #fff;
   }
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #f00 !important; /* Change border color around this buttons */
+  background: #fff !important; /* Change background for button itself */
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background: #f00 !important; /* Change color for horizontal lines */
 }
 
 .active {
