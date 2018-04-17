@@ -1,5 +1,5 @@
 
-[CvApp](https://cv-app.org/)
+CvApp
 =============
 Web app for CV creation.
 
